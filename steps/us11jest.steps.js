@@ -4,12 +4,12 @@ const assert = require('assert'); // Usando o assert nativo do Node.js
 let isnonregisteredUser;
 let popularPosts = [];
 
-Given('I am not logged in', function () {
+Given('I am not logged inn', function () {
     // Simula que o utilizador está registrado
     isnonregisteredUser = true;
 });
 
-When('I navigate to the popular posts section', function () {
+When('I navigate to the popular posts sectionn', function () {
     // Simula a navegação para a seção de posts populares
     if (!isnonregisteredUser) {
         // Cria uma lista de 15 posts populares
@@ -48,7 +48,7 @@ Then('I should see a list of {int} posts', function (numberOfPosts) {
 });
 
 // Then the posts should be ordered by number of votes in descending order
-Then('the posts should be ordered by number of votes in descending order', function () {
+Then('the posts should be ordered by number of votes in descending orderr', function () {
     // Implementação para verificar a ordem dos posts
     const isOrdered = popularPosts.every((post, index, arr) => {
         return index === 0 || arr[index - 1].likes >= post.likes;
@@ -56,7 +56,7 @@ Then('the posts should be ordered by number of votes in descending order', funct
     assert.strictEqual(isOrdered, true); // Verifica se está ordenado
 });
 
-Given('there are posts with the same number of votes', function () {
+Given('there are posts with the same number of votess', function () {
     // Simula posts com o mesmo número de votos
     popularPosts = [
         { id: 1, title: 'Post A', likes: 100, comments: 5 },
@@ -65,7 +65,7 @@ Given('there are posts with the same number of votes', function () {
     ];
 });
 
-Then('the posts with more comments should appear higher in the list', function () {
+Then('the posts with more comments should appear higher in the lists', function () {
     // Ordena por votos e comentários
     popularPosts.sort((a, b) => {
         if (b.likes === a.likes) {
@@ -94,7 +94,7 @@ Then('each post should display its creation timestamp', function () {
     });
 });
 
-When('there are more than 15 popular posts available', function () {
+When('there are more than 15 popular posts availablee', function () {
     // Cria uma lista com mais de 15 posts populares
     popularPosts = Array.from({ length: 20 }, (v, i) => ({
         id: i + 1,
@@ -113,7 +113,7 @@ Then('only the 15 most popular posts should be displayed', function () {
     assert.strictEqual(popularPosts.length, 15); // Verifica se tem 15 posts
 });
 
-Given('I am viewing the popular posts section', function () {
+Given('I am viewing the popular posts sectionn', function () {
     // Simula a navegação para a seção de posts populares
     if (!isnonregisteredUser) {
         popularPosts = Array.from({ length: 15 }, (v, i) => ({

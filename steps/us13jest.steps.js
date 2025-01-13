@@ -19,7 +19,7 @@ When('I attempt to access a post', function () {
     }
 });
 
-Then('I should be recognized as a non-registered user', function () {
+Then('I should be recognized as a non-registered userr', function () {
     const isUserRegistered = false; // Substitua pela lógica real
     assert.strictEqual(isUserRegistered, false); // Usando assert
 });

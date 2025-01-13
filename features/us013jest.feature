@@ -9,7 +9,7 @@ Feature: Non-registered user views comments
 Scenario: Verify user is non-registered
     I am not logged in for non-registered users
     When I attempt to access a post
-    Then I should be recognized as a non-registered user
+    Then I should be recognized as a non-registered userr
 
 Scenario: Non-registered user views post content
     Given I am not logged in
