@@ -7,7 +7,7 @@ let postContent;
 let comments;
 
 // Cenário: Verify user is non-registered
-Given('I am not logged in', function () {
+Given('I am not logged in for non-registered users', function () {
     // Simula que o utilizador não está logado
     isLoggedIn = false;
 });

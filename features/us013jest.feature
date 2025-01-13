@@ -7,7 +7,7 @@ Feature: Non-registered user views comments
     So that I can read the discussion without logging in
 
 Scenario: Verify user is non-registered
-    Given I am not logged in
+    I am not logged in for non-registered users
     When I attempt to access a post
     Then I should be recognized as a non-registered user
 
